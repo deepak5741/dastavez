@@ -88,7 +88,14 @@
   "errGeneric": "Something went wrong. Check your internet and try again.",
   "notFoundTitle": "Guide not found",
   "notFoundBody": "We don't have a guide for this document yet. Search for another one.",
-  "goHome": "Go to all documents"
+  "goHome": "Go to all documents",
+  "continueTitle": "Continue where you left off",
+  "continueBtn": "Continue",
+  "installApp": "Install app",
+  "installTitle": "Install Dastavez",
+  "installBody": "Add Dastavez to your home screen. It opens like an app, and guides you have opened work without internet.",
+  "installIos": "On iPhone: tap the Share button, then ‘Add to Home Screen’.",
+  "offline": "You're offline. Showing saved pages."
  },
  "docs": {
   "passport": {

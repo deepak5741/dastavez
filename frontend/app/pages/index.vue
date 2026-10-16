@@ -75,6 +75,7 @@ useHead(() => ({ title: t("allDocs") }));
       <h1 v-if="user">{{ t("greet", { name: user.name.split(" ")[0] ?? "" }) }} <em>{{ t("greetB") }}</em></h1>
       <h1 v-else>{{ t("heroA") }} <em>{{ t("heroB") }}</em></h1>
       <p class="lead">{{ t("lead") }}</p>
+      <ClientOnly><ContinueCard /></ClientOnly>
       <SearchBox v-model="q" @submit="submitSearch" />
       <ScrollRow class="popular" :label="t('popular')">
         <NuxtLink v-for="d in popular?.items ?? []" :key="d.id" class="chip" :to="`/documents/${d.id}`">

@@ -1,6 +1,10 @@
 import type { H3Event } from "h3";
 
-type AuthResponse = { token: string; user: { id: string; name: string; email: string } };
+type AuthResponse = {
+  token: string;
+  user: { id: string; name: string; email: string };
+  preferences: { lang: string | null; theme: "light" | "dark" | null };
+};
 
 /**
  * Sends a sign-in or sign-up to the API. On success the token goes into the cookie and only the user
@@ -15,7 +19,7 @@ export async function forwardAuth(event: H3Event, path: string) {
       headers: apiHeaders(event),
     });
     setSessionCookie(event, res.token);
-    return { user: res.user };
+    return { user: res.user, preferences: res.preferences };
   } catch (err: unknown) {
     const e = err as { statusCode?: number; data?: { error?: string } };
     throw createError({

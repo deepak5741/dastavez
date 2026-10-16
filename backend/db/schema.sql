@@ -92,3 +92,9 @@ CREATE TABLE IF NOT EXISTS step_progress (
   updated_at   timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, document_id)
 );
+
+-- Per-account preferences and where the user left off (added later; safe to re-run).
+ALTER TABLE users ADD COLUMN IF NOT EXISTS preferred_lang text REFERENCES languages(code) ON DELETE SET NULL;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS theme text CHECK (theme IN ('light', 'dark'));
+ALTER TABLE users ADD COLUMN IF NOT EXISTS last_document_id text REFERENCES documents(id) ON DELETE SET NULL;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS last_seen_at timestamptz;

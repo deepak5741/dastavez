@@ -279,3 +279,17 @@ html:not([lang="en"]) body { line-height: 1.65; }
   .scroll-row.popular { flex-wrap: wrap; row-gap: 8px; }
   .scroll-row.popular .scroll-label { flex-basis: 100%; }
 }
+
+/* "Continue where you left off" */
+.continue { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; max-width: 720px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--accent); border-radius: 16px; text-decoration: none; color: var(--ink); box-shadow: var(--shadow); }
+.continue:hover { background: var(--accent-soft); }
+.continue-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.continue-text small { color: var(--accent); font-weight: 700; font-size: 13px; }
+.continue-text b { font-family: var(--f-display); font-size: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.continue-progress { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+.continue-progress .bar { width: 120px; max-width: 30vw; margin: 0; }
+.continue-btn { pointer-events: none; }
+@media (max-width: 520px) {
+  .continue { grid-template-columns: auto minmax(0, 1fr); }
+  .continue-btn { grid-column: 1 / -1; justify-content: center; }
+}

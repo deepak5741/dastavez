@@ -3,7 +3,7 @@ import type { DocumentDetail } from "~/utils/types";
 
 const route = useRoute();
 const { t, lang } = useSite();
-const { user, saved, stepsDone, toggleStep, toggleSaved } = useAuth();
+const { user, saved, stepsDone, toggleStep, toggleSaved, visitDocument } = useAuth();
 const { open } = useModal();
 const { show } = useToast();
 
@@ -17,6 +17,10 @@ const doc = computed(() => data.value?.document ?? null);
 if (import.meta.server && error.value) {
   setResponseStatus(useRequestEvent()!, error.value.statusCode === 404 ? 404 : 502);
 }
+
+// Remember this guide for "Continue where you left off" (only guides that exist).
+onMounted(() => doc.value && visitDocument(id.value));
+watch(id, (v) => doc.value && visitDocument(v));
 
 const done = computed(() => stepsDone(id.value));
 const isSaved = computed(() => saved.value.includes(id.value));

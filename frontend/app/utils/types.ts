@@ -60,4 +60,10 @@ export interface User {
 export interface UserState {
   saved: string[];
   progress: Record<string, number[]>;
+  lastDocument: string | null;
+}
+
+export interface Preferences {
+  lang: string | null;
+  theme: "light" | "dark" | null;
 }

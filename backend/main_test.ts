@@ -112,6 +112,30 @@ Deno.test({ name: "sign up, saved documents, progress, import, logout", ...opts,
   assertEquals((await call("GET", "/api/me", { token })).status, 401);
 }});
 
+Deno.test({ name: "language, theme and last guide follow the account to a new login", ...opts, fn: async () => {
+  const email = `prefs-${crypto.randomUUID().slice(0, 8)}@example.com`;
+  const signup = await call("POST", "/api/auth/signup", {
+    body: { name: "Prefs", email, password: "correct horse 2", preferredLang: "mr", theme: "dark" },
+  });
+  assertEquals(signup.json.preferences, { lang: "mr", theme: "dark" }); // device choices saved at sign-up
+  const token = signup.json.token;
+
+  assertEquals((await call("PUT", "/api/me/preferences", { token, body: { lang: "zz" } })).status, 422);
+  await call("PUT", "/api/me/preferences", { token, body: { lang: "ta" } });
+  await call("PUT", "/api/me/last-document/voter-id", { token });
+  assertEquals((await call("GET", "/api/me/state", { token })).json.lastDocument, "voter-id");
+  await call("PUT", "/api/me/progress/pan", { token, body: { completed: [1] } }); // working on a guide also counts
+  await call("POST", "/api/auth/logout", { token });
+
+  // "Another device": a fresh login gets everything back.
+  const login = await call("POST", "/api/auth/login", { body: { email, password: "correct horse 2" } });
+  assertEquals(login.json.preferences, { lang: "ta", theme: "dark" });
+  const state = (await call("GET", "/api/me/state", { token: login.json.token })).json;
+  assertEquals(state.lastDocument, "pan");
+  assertEquals(state.progress.pan, [1]);
+  await sql`DELETE FROM users WHERE email = ${email}`;
+}});
+
 Deno.test({ name: "admin API needs the token and validates step counts", ...opts, fn: async () => {
   assertEquals((await call("PUT", "/api/admin/ui/en", { body: { strings: { x: "y" } } })).status, 401);
   const token = Deno.env.get("ADMIN_TOKEN")!;

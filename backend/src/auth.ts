@@ -52,6 +52,18 @@ export async function deleteSession(token: string) {
   await sql`DELETE FROM sessions WHERE token_hash = ${await sha256(token)}`;
 }
 
+export interface Preferences {
+  lang: string | null;
+  theme: "light" | "dark" | null;
+}
+
+/** Language and theme saved on the account (null = not chosen yet). */
+export async function getPreferences(userId: string): Promise<Preferences> {
+  const [row] = await sql<{ preferredLang: string | null; theme: "light" | "dark" | null }[]>`
+    SELECT preferred_lang, theme FROM users WHERE id = ${userId}`;
+  return { lang: row?.preferredLang ?? null, theme: row?.theme ?? null };
+}
+
 export interface User {
   id: string;
   name: string;

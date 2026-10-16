@@ -25,8 +25,7 @@ await useAsyncData("me", async () => {
       requestFetch<UserState>("/api/me/state"),
     ]);
     auth.user.value = user;
-    auth.saved.value = state.saved;
-    auth.progress.value = state.progress;
+    auth.applyState(state);
   } catch {
     auth.user.value = null; // not signed in
   }

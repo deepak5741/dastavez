@@ -33,6 +33,16 @@ type Locale = {
   }>;
 };
 
+// --if-empty: only seed a brand-new database (used on deploy so admin edits are never overwritten).
+if (Deno.args.includes("--if-empty")) {
+  const [{ count }] = await sql<{ count: number }[]>`SELECT count(*)::int AS count FROM documents`;
+  if (count > 0) {
+    console.log(`Database already has ${count} documents; skipping seed.`);
+    await sql.end();
+    Deno.exit(0);
+  }
+}
+
 const languages = await read<Lang[]>("languages.json");
 const categories = await read<{ id: string; sortOrder: number }[]>("categories.json");
 const documents = await read<Doc[]>("documents.json");

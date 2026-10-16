@@ -8,7 +8,12 @@ export function useTheme() {
     path: "/",
   });
   const dark = computed(() => theme.value === "dark");
-  const toggle = () => (theme.value = dark.value ? "light" : "dark");
+  const signedIn = useState<unknown>("user", () => null);
+  /** Switches theme; when signed in, the choice is saved on the account too. */
+  function toggle() {
+    theme.value = dark.value ? "light" : "dark";
+    if (signedIn.value) $fetch("/api/me/preferences", { method: "PUT", body: { theme: theme.value } }).catch(() => {});
+  }
   return { theme, dark, toggle };
 }
 

@@ -18,12 +18,20 @@ export function useSite() {
     return template.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? ""));
   }
 
-  /** Loads all interface text for a language and switches to it once it has arrived. */
-  async function setLang(code: string) {
+  const signedIn = useState<unknown>("user", () => null);
+
+  /**
+   * Loads all interface text for a language and switches to it once it has arrived.
+   * When signed in, the choice is also saved on the account (unless `save: false`).
+   */
+  async function setLang(code: string, opts: { save?: boolean } = {}) {
     const next = await $fetch<Bootstrap>("/api/bootstrap", { query: { lang: code } });
     data.value = next;
     lang.value = next.lang;
     cookie.value = next.lang;
+    if (signedIn.value && opts.save !== false) {
+      $fetch("/api/me/preferences", { method: "PUT", body: { lang: next.lang } }).catch(() => {});
+    }
   }
 
   return { lang, data, languages, categories, current, t, setLang };

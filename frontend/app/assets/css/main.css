@@ -61,10 +61,12 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 .avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--saffron-soft); color: var(--saffron); display: grid; place-items: center; font-weight: 700; font-size: 13px; }
 
 /* Hero / search */
-.hero { padding-block: 48px 28px; }
+/* Hero: one vertical rhythm for every language and width. Children have no margins; the gaps do the spacing. */
+.hero { padding-block: 48px 28px; display: flex; flex-direction: column; align-items: stretch; gap: var(--hero-gap, 20px); }
+.hero > * { margin: 0; }
 .hero h1 { font-size: clamp(32px, 5.4vw, 56px); font-weight: 800; letter-spacing: -.025em; max-width: 16ch; }
 .hero h1 em { font-style: normal; color: var(--accent); }
-.hero p.lead { color: var(--muted); font-size: 18px; max-width: 58ch; margin: 14px 0 26px; }
+.hero p.lead { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0; }
 .search { position: relative; max-width: 720px; }
 .search-box { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 2px solid var(--line); border-radius: 16px; padding: 6px 6px 6px 18px; box-shadow: var(--shadow); transition: border-color .15s; }
 .search-box:focus-within { border-color: var(--accent); }
@@ -79,8 +81,8 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 .suggest .s-hi { color: var(--muted); font-size: 14px; }
 .suggest .s-cat { font-size: 12px; color: var(--muted); white-space: nowrap; }
 .suggest .empty { padding: 12px; color: var(--muted); }
-.popular { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
-.popular span { color: var(--muted); font-size: 14px; margin-right: 4px; }
+.popular { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.popular .scroll-label { color: var(--muted); font-size: 14px; }
 .chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; font-size: 14px; }
 .chip:hover { border-color: var(--accent); color: var(--accent); }
 
@@ -190,13 +192,13 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
   .top .theme-btn { width: 34px; height: 34px; padding: 0; }
   .top .btn .lbl { display: none; }
   .top .lang-btn { padding: 7px 10px; }
-  .hero { padding-block: 28px 16px; }
+  .hero { padding-block: 28px 16px; --hero-gap: 16px; }
   .hero p.lead { font-size: 16px; }
   .search-box { padding-left: 12px; border-radius: 14px; }
   .search-box .go { padding: 11px 14px; }
   .search-box input { font-size: 16px; padding-block: 10px; }
   .section-head h2 { font-size: 21px; }
-  .tabs { flex-wrap: nowrap; overflow-x: auto; width: 100%; padding-bottom: 4px; scrollbar-width: none; }
+  .section-head .scroll-row.tabs { flex-basis: 100%; justify-content: flex-start; }
   .tab { flex: none; }
   .grid { grid-template-columns: 1fr; }
   .detail-head { flex-direction: column; }
@@ -240,6 +242,40 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 .state h1 { font-size: clamp(26px, 4vw, 36px); }
 .state p { color: var(--muted); max-width: 46ch; margin: 0; }
 .card { color: inherit; text-decoration: none; }
-.chip { color: var(--ink); text-decoration: none; }
+.chip { color: var(--ink); text-decoration: none; white-space: nowrap; flex: none; }
+
+/* Single sliding row (Popular). */
+.scroll-row { position: relative; display: flex; align-items: center; gap: 10px; max-width: 720px; min-width: 0; }
+.scroll-row.popular { flex-wrap: nowrap; }
+.scroll-label { flex: none; color: var(--muted); font-size: 14px; }
+.scroll-viewport { position: relative; flex: 1; min-width: 0; }
+.scroll-track { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; padding-block: 2px; }
+.scroll-track::-webkit-scrollbar { display: none; }
+.scroll-track > * { scroll-snap-align: start; }
+/* At an edge with more behind it, chips fade to fully transparent under the arrow (38px), so the arrow never covers a chip. */
+.scroll-viewport.fade-r .scroll-track { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 72px), transparent calc(100% - 38px)); mask-image: linear-gradient(90deg, #000 calc(100% - 72px), transparent calc(100% - 38px)); }
+.scroll-viewport.fade-l .scroll-track { -webkit-mask-image: linear-gradient(90deg, transparent 38px, #000 72px); mask-image: linear-gradient(90deg, transparent 38px, #000 72px); }
+.scroll-viewport.fade-l.fade-r .scroll-track { -webkit-mask-image: linear-gradient(90deg, transparent 38px, #000 72px, #000 calc(100% - 72px), transparent calc(100% - 38px)); mask-image: linear-gradient(90deg, transparent 38px, #000 72px, #000 calc(100% - 72px), transparent calc(100% - 38px)); }
+.scroll-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 20px; line-height: 1; display: grid; place-items: center; padding: 0 0 2px; }
+.scroll-arrow.prev { left: 0; }
+.scroll-arrow.next { right: 0; }
+.scroll-arrow:hover { border-color: var(--accent); color: var(--accent); }
 .brand-mark, .brand b { text-decoration: none; }
 
+
+/* Indian scripts: taller letters need more line height, and letter-spacing breaks joined letters (conjuncts). */
+html:not([lang="en"]) h1, html:not([lang="en"]) h2, html:not([lang="en"]) h3 { letter-spacing: 0; line-height: 1.32; }
+html:not([lang="en"]) .hero h1 { font-size: clamp(30px, 5vw, 52px); }
+html:not([lang="en"]) body { line-height: 1.65; }
+
+/* Category tabs use the same sliding row as Popular. */
+.scroll-row.tabs { flex-wrap: nowrap; gap: 0; }
+.section-head .scroll-row.tabs { flex: 1 1 320px; max-width: 100%; justify-content: flex-end; }
+.section-head .scroll-row.tabs .scroll-viewport { flex: 1 1 auto; }
+.tab { flex: none; white-space: nowrap; }
+
+/* Narrow screens: the Popular label sits above its chips so the chips keep the full width. */
+@media (max-width: 440px) {
+  .scroll-row.popular { flex-wrap: wrap; row-gap: 8px; }
+  .scroll-row.popular .scroll-label { flex-basis: 100%; }
+}

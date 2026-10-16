@@ -9,7 +9,11 @@ const { user, saved } = useAuth();
 // Search text and category tab live in the URL (?q=…&cat=…) so results can be shared.
 const q = ref(String(route.query.q ?? ""));
 const searchQ = ref(q.value);
-const cat = computed(() => String(route.query.cat ?? "all"));
+// The Saved tab only exists while signed in; a ?cat=saved link opened while signed out shows everything.
+const cat = computed(() => {
+  const c = String(route.query.cat ?? "all");
+  return c === "saved" && !user.value ? "all" : c;
+});
 
 let timer: ReturnType<typeof setTimeout> | undefined;
 watch(q, (v) => {
@@ -72,18 +76,17 @@ useHead(() => ({ title: t("allDocs") }));
       <h1 v-else>{{ t("heroA") }} <em>{{ t("heroB") }}</em></h1>
       <p class="lead">{{ t("lead") }}</p>
       <SearchBox v-model="q" @submit="submitSearch" />
-      <div class="popular">
-        <span>{{ t("popular") }}</span>
+      <ScrollRow class="popular" :label="t('popular')">
         <NuxtLink v-for="d in popular?.items ?? []" :key="d.id" class="chip" :to="`/documents/${d.id}`">
           {{ d.name }}
         </NuxtLink>
-      </div>
+      </ScrollRow>
     </section>
 
     <section class="wrap">
       <div class="section-head">
         <h2 id="grid-title">{{ title }}</h2>
-        <div class="tabs" role="tablist">
+        <ScrollRow class="tabs" role="tablist">
           <button
             v-for="c in tabs"
             :key="c.id"
@@ -95,7 +98,7 @@ useHead(() => ({ title: t("allDocs") }));
           >
             {{ c.label }}
           </button>
-        </div>
+        </ScrollRow>
       </div>
       <div ref="grid" class="grid" :aria-busy="pending">
         <DocCard v-for="d in list?.items ?? []" :key="d.id" :doc="d" />

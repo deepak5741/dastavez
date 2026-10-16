@@ -1,0 +1,453 @@
+[
+  {
+    "id": "passport",
+    "category": "identity",
+    "icon": "globe",
+    "portal": "https://www.passportindia.gov.in",
+    "helpline": "1800-258-1800",
+    "aliases": [
+      "passport",
+      "pasport",
+      "tatkal",
+      "visa",
+      "travel"
+    ],
+    "youtubeQueries": [
+      "how to apply passport online India step by step",
+      "passport seva kendra process inside counters A B C",
+      "passport police verification process"
+    ],
+    "popular": true,
+    "sortOrder": 0,
+    "stepLinks": [
+      "passportindia.gov.in",
+      null,
+      null,
+      "portal",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "learner-licence",
+    "category": "transport",
+    "icon": "car",
+    "portal": "https://sarathi.parivahan.gov.in",
+    "helpline": "+91-120-4925505",
+    "aliases": [
+      "learner",
+      "learning licence",
+      "ll",
+      "learner license",
+      "llr"
+    ],
+    "youtubeQueries": [
+      "learner licence online apply from home Aadhaar",
+      "learning licence test questions road signs",
+      "sarathi parivahan LL test faceless"
+    ],
+    "popular": false,
+    "sortOrder": 1,
+    "stepLinks": [
+      "sarathi.parivahan.gov.in",
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "driving-licence",
+    "category": "transport",
+    "icon": "car",
+    "portal": "https://sarathi.parivahan.gov.in",
+    "helpline": "+91-120-4925505",
+    "aliases": [
+      "driving license",
+      "driving licence",
+      "dl",
+      "licence",
+      "license",
+      "rto",
+      "permanent licence"
+    ],
+    "youtubeQueries": [
+      "permanent driving licence apply online sarathi",
+      "RTO driving test 8 track tips",
+      "driving licence test car parking reverse"
+    ],
+    "popular": true,
+    "sortOrder": 2,
+    "stepLinks": [
+      null,
+      "sarathi.parivahan.gov.in",
+      null,
+      null,
+      "portal",
+      null
+    ]
+  },
+  {
+    "id": "aadhaar",
+    "category": "identity",
+    "icon": "finger",
+    "portal": "https://myaadhaar.uidai.gov.in",
+    "helpline": "1947",
+    "aliases": [
+      "aadhaar",
+      "adhaar",
+      "aadhar",
+      "adhar",
+      "uid",
+      "uidai",
+      "aadhaar update",
+      "baal aadhaar"
+    ],
+    "youtubeQueries": [
+      "new aadhaar card enrolment process",
+      "how to download e-aadhaar online",
+      "aadhaar address update online myaadhaar"
+    ],
+    "popular": true,
+    "sortOrder": 3,
+    "stepLinks": [
+      "uidai.gov.in",
+      null,
+      null,
+      "portal",
+      null,
+      null
+    ]
+  },
+  {
+    "id": "pan",
+    "category": "finance",
+    "icon": "card",
+    "portal": "https://www.incometax.gov.in",
+    "helpline": "1800-180-1961",
+    "aliases": [
+      "pan",
+      "pan card",
+      "permanent account number",
+      "e-pan",
+      "income tax card"
+    ],
+    "youtubeQueries": [
+      "instant e-PAN apply online free aadhaar",
+      "PAN card apply online NSDL Protean",
+      "download e-PAN card"
+    ],
+    "popular": true,
+    "sortOrder": 4,
+    "stepLinks": [
+      "incometax.gov.in",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "voter-id",
+    "category": "identity",
+    "icon": "vote",
+    "portal": "https://voters.eci.gov.in",
+    "helpline": "1950",
+    "aliases": [
+      "voter",
+      "voter id",
+      "voter card",
+      "epic",
+      "election card",
+      "form 6",
+      "matdata"
+    ],
+    "youtubeQueries": [
+      "voter id apply online form 6 step by step",
+      "download e-EPIC voter card",
+      "voter helpline app new registration"
+    ],
+    "popular": true,
+    "sortOrder": 5,
+    "stepLinks": [
+      "voters.eci.gov.in",
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "ration-card",
+    "category": "welfare",
+    "icon": "home",
+    "portal": "https://nfsa.gov.in",
+    "helpline": "1967",
+    "aliases": [
+      "ration",
+      "ration card",
+      "nfsa",
+      "bpl card",
+      "food card",
+      "pds"
+    ],
+    "youtubeQueries": [
+      "new ration card apply online",
+      "ration card name add online",
+      "one nation one ration card how to use"
+    ],
+    "popular": false,
+    "sortOrder": 6,
+    "stepLinks": [
+      "nfsa.gov.in",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "birth-certificate",
+    "category": "certificates",
+    "icon": "baby",
+    "portal": "https://crsorgi.gov.in",
+    "helpline": null,
+    "aliases": [
+      "birth",
+      "birth certificate",
+      "janm",
+      "janam praman patra",
+      "crs"
+    ],
+    "youtubeQueries": [
+      "birth certificate apply online CRS portal",
+      "birth certificate download online",
+      "late birth certificate registration process"
+    ],
+    "popular": false,
+    "sortOrder": 7,
+    "stepLinks": [
+      null,
+      "crsorgi.gov.in",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "death-certificate",
+    "category": "certificates",
+    "icon": "doc",
+    "portal": "https://crsorgi.gov.in",
+    "helpline": null,
+    "aliases": [
+      "death",
+      "death certificate",
+      "mrityu"
+    ],
+    "youtubeQueries": [
+      "death certificate apply online",
+      "death certificate download CRS"
+    ],
+    "popular": false,
+    "sortOrder": 8,
+    "stepLinks": [
+      null,
+      "crsorgi.gov.in",
+      null,
+      null
+    ]
+  },
+  {
+    "id": "income-certificate",
+    "category": "certificates",
+    "icon": "rupee",
+    "portal": "https://services.india.gov.in",
+    "helpline": null,
+    "aliases": [
+      "income",
+      "income certificate",
+      "aay praman patra",
+      "ews"
+    ],
+    "youtubeQueries": [
+      "income certificate apply online",
+      "income certificate CSC process"
+    ],
+    "popular": false,
+    "sortOrder": 9,
+    "stepLinks": [
+      "portal",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "caste-certificate",
+    "category": "certificates",
+    "icon": "doc",
+    "portal": "https://services.india.gov.in",
+    "helpline": null,
+    "aliases": [
+      "caste",
+      "caste certificate",
+      "sc",
+      "st",
+      "obc",
+      "jati praman patra",
+      "non creamy layer"
+    ],
+    "youtubeQueries": [
+      "caste certificate apply online",
+      "OBC non creamy layer certificate apply"
+    ],
+    "popular": false,
+    "sortOrder": 10,
+    "stepLinks": [
+      "portal",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "domicile-certificate",
+    "category": "certificates",
+    "icon": "home",
+    "portal": "https://services.india.gov.in",
+    "helpline": null,
+    "aliases": [
+      "domicile",
+      "residence certificate",
+      "niwas praman patra",
+      "residential certificate"
+    ],
+    "youtubeQueries": [
+      "domicile certificate apply online",
+      "niwas praman patra online apply"
+    ],
+    "popular": false,
+    "sortOrder": 11,
+    "stepLinks": [
+      "portal",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "marriage-certificate",
+    "category": "certificates",
+    "icon": "rings",
+    "portal": "https://services.india.gov.in",
+    "helpline": null,
+    "aliases": [
+      "marriage",
+      "marriage certificate",
+      "vivah",
+      "court marriage",
+      "special marriage act"
+    ],
+    "youtubeQueries": [
+      "marriage registration online process India",
+      "court marriage process special marriage act"
+    ],
+    "popular": false,
+    "sortOrder": 12,
+    "stepLinks": [
+      null,
+      "portal",
+      null,
+      "portal",
+      null
+    ]
+  },
+  {
+    "id": "ayushman-card",
+    "category": "health",
+    "icon": "health",
+    "portal": "https://beneficiary.nha.gov.in",
+    "helpline": "14555",
+    "aliases": [
+      "ayushman",
+      "ayushman bharat",
+      "pmjay",
+      "pm-jay",
+      "health card",
+      "golden card",
+      "vay vandana"
+    ],
+    "youtubeQueries": [
+      "ayushman card apply online mobile app",
+      "ayushman card download kaise kare",
+      "ayushman vay vandana card 70 plus"
+    ],
+    "popular": false,
+    "sortOrder": 13,
+    "stepLinks": [
+      "beneficiary.nha.gov.in",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "abha",
+    "category": "health",
+    "icon": "health",
+    "portal": "https://abha.abdm.gov.in",
+    "helpline": "1800-11-4477",
+    "aliases": [
+      "abha",
+      "health id",
+      "abha card",
+      "abdm",
+      "digital health"
+    ],
+    "youtubeQueries": [
+      "ABHA card create online",
+      "ABHA health ID benefits how to use"
+    ],
+    "popular": false,
+    "sortOrder": 14,
+    "stepLinks": [
+      "abha.abdm.gov.in",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "e-shram",
+    "category": "welfare",
+    "icon": "worker",
+    "portal": "https://eshram.gov.in",
+    "helpline": "14434",
+    "aliases": [
+      "eshram",
+      "e-shram",
+      "shram card",
+      "labour card",
+      "unorganised worker"
+    ],
+    "youtubeQueries": [
+      "e-shram card registration online",
+      "e-shram card benefits"
+    ],
+    "popular": false,
+    "sortOrder": 15,
+    "stepLinks": [
+      "eshram.gov.in",
+      null,
+      null,
+      null
+    ]
+  }
+]

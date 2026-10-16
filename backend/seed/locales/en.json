@@ -1,0 +1,742 @@
+{
+ "ui": {
+  "brandSub": "Govt documents, step by step",
+  "login": "Log in",
+  "signup": "Sign up",
+  "saved": "Saved",
+  "account": "Account",
+  "toDark": "Switch to dark theme",
+  "toLight": "Switch to light theme",
+  "language": "Language",
+  "chooseLang": "Choose your language",
+  "heroA": "Every government document,",
+  "heroB": "one step at a time.",
+  "greet": "Namaste, {name}.",
+  "greetB": "What do you need today?",
+  "lead": "Search any Indian government document to see the full process: who can apply, what to carry, each step from form to delivery, and videos that show it.",
+  "placeholder": "Try ‘passport’, ‘adhaar’, ‘DL’, ‘राशन’…",
+  "search": "Search",
+  "searchLabel": "Search documents",
+  "popular": "Popular:",
+  "allDocs": "All documents",
+  "resultsFor": "Results for “{q}”",
+  "yourSaved": "Your saved documents",
+  "noMatch": "No match for “{q}”. Try a simpler word like ‘licence’ or ‘certificate’.",
+  "noSaved": "Nothing saved yet. Open a document and tap ‘Save’ to keep it here.",
+  "noResults": "No documents match. Try another word, or pick ‘All’.",
+  "fee": "Fee",
+  "time": "Time",
+  "progress": "Progress",
+  "back": "← All documents",
+  "issuedBy": "Issued by {x}",
+  "save": "☆ Save",
+  "savedBtn": "★ Saved",
+  "official": "Official website ↗",
+  "timeToGet": "Time to get it",
+  "how": "How",
+  "steps": "Steps",
+  "process": "Step-by-step process",
+  "nOfM": "{n} of {m} done",
+  "markDone": "Mark as done",
+  "undo": "Undo",
+  "markStep": "Mark step {n} done",
+  "noteUser": "Your progress is saved to your account.",
+  "noteGuest": "Progress is kept on this device. Sign up to see it on any device.",
+  "whoCan": "Who can apply",
+  "docsReady": "Documents to keep ready",
+  "watch": "Watch and learn",
+  "ytSub": "YouTube · opens video results",
+  "ytLang": "{name}: process explained in {lang}",
+  "ytNote": "Each link opens fresh YouTube results, so you see the latest videos for the current process.",
+  "officialHelp": "Official help",
+  "helpline": "Helpline",
+  "goodToKnow": "Good to know",
+  "toastSaved": "Saved to your list",
+  "toastRemoved": "Removed from your list",
+  "toastAllDone": "All steps done. Congratulations on your {name}!",
+  "toastCreated": "Account created. Welcome, {name}!",
+  "toastLoggedIn": "Logged in as {name}",
+  "toastLoggedOut": "Logged out",
+  "toastLangFail": "Couldn't load {lang}. Showing English.",
+  "createAcct": "Create your account",
+  "welcomeBack": "Welcome back",
+  "authSub": "Optional. It saves your documents and progress so you can see them on any device.",
+  "saveReason": "Create a free account to save documents.",
+  "yourName": "Your name",
+  "email": "Email",
+  "guest": "Continue as guest",
+  "errEmail": "Enter a valid email, like name@gmail.com.",
+  "errName": "Enter your name.",
+  "errExists": "This email already has an account. Switch to Log in.",
+  "savedCount": "{n} saved",
+  "close": "Close",
+  "logout": "Log out",
+  "disclaimer": "Dastavez is an independent guide, not a government website. Fees and timelines change, so always confirm on the official portal before you pay. Never pay agents for services that are free (Aadhaar enrolment, Voter ID, ABHA, e-Shram, Ayushman card).",
+  "cat_all": "All",
+  "cat_identity": "Identity",
+  "cat_transport": "Transport",
+  "cat_finance": "Finance",
+  "cat_certificates": "Certificates",
+  "cat_health": "Health",
+  "cat_welfare": "Welfare",
+  "cat_saved": "Saved",
+  "password": "Password",
+  "passwordHint": "At least 8 characters",
+  "errLogin": "Email or password is wrong.",
+  "errPassword": "Use a password of at least 8 characters.",
+  "errTooMany": "Too many attempts. Wait a minute and try again.",
+  "errGeneric": "Something went wrong. Check your internet and try again.",
+  "notFoundTitle": "Guide not found",
+  "notFoundBody": "We don't have a guide for this document yet. Search for another one.",
+  "goHome": "Go to all documents"
+ },
+ "docs": {
+  "passport": {
+   "name": "Passport",
+   "issuer": "Ministry of External Affairs (Passport Seva)",
+   "fee": "₹1,500 (Tatkal ₹3,500)",
+   "time": "7–30 days",
+   "mode": "Online + visit",
+   "eligibility": "Any Indian citizen. Minors apply with a parent's consent (Annexure D).",
+   "docs": [
+    "Proof of address: Aadhaar, electricity/water bill, bank passbook or rent agreement",
+    "Proof of date of birth: birth certificate, PAN, Aadhaar or Class 10 marksheet",
+    "Old passport, if you are applying for re-issue",
+    "Original documents plus one self-attested photocopy of each"
+   ],
+   "steps": [
+    {
+     "t": "Register on Passport Seva",
+     "d": "Create a free account on the Passport Seva portal or the mPassport Seva app. Choose your nearest Regional Passport Office."
+    },
+    {
+     "t": "Fill the application form",
+     "d": "Pick ‘Apply for Fresh Passport’ or ‘Re-issue’. Fill personal, family and address details. Check spelling against your Aadhaar."
+    },
+    {
+     "t": "Pay the fee and book a slot",
+     "d": "Pay online (card, UPI or net banking) and book an appointment at a Passport Seva Kendra (PSK) or Post Office PSK. Print or save the appointment receipt."
+    },
+    {
+     "t": "Visit the PSK with originals",
+     "d": "Reach 15 minutes early. You pass three counters: document check and photo + fingerprints (A), verification (B), and approval (C). Your photo is taken there.",
+     "w": "Passport Seva Kendra"
+    },
+    {
+     "t": "Police verification",
+     "d": "A police officer visits your address or calls you to the station to verify identity and address. Keep your documents handy. Track it in the mPassport Police app."
+    },
+    {
+     "t": "Passport printed and posted",
+     "d": "Once police clear the report, the passport is printed and sent by Speed Post. Track the status online with your file number."
+    },
+    {
+     "t": "Receive and check",
+     "d": "Sign for the passport at your door. Check name, date of birth and photo. Report mistakes to the RPO immediately."
+    }
+   ],
+   "tips": [
+    "Tatkal skips the queue but needs extra documents.",
+    "Use the same name spelling on every document.",
+    "Book slots early in the morning when new ones open."
+   ]
+  },
+  "learner-licence": {
+   "name": "Learner's Licence",
+   "issuer": "Ministry of Road Transport (Sarathi / your RTO)",
+   "fee": "₹150 + ₹50 test",
+   "time": "Same day",
+   "mode": "Online",
+   "eligibility": "16+ for gearless two-wheelers up to 50cc; 18+ for cars and geared bikes.",
+   "docs": [
+    "Aadhaar (for online test from home)",
+    "Proof of age and address",
+    "Passport-size photo and signature (scanned)",
+    "Medical certificate Form 1A if you are above 40"
+   ],
+   "steps": [
+    {
+     "t": "Open Sarathi and choose your state",
+     "d": "Go to Sarathi Parivahan → Online Services → Driving Licence Related Services → select your state."
+    },
+    {
+     "t": "Apply for Learner Licence",
+     "d": "Pick ‘Apply for Learner Licence’. Choose Aadhaar-based authentication to give the test from home (where your state allows it)."
+    },
+    {
+     "t": "Fill the form and upload documents",
+     "d": "Enter details, choose vehicle classes (MCWG for bike, LMV for car), upload photo, signature and documents."
+    },
+    {
+     "t": "Pay the fee",
+     "d": "Pay online. Save the receipt and application number."
+    },
+    {
+     "t": "Take the online test",
+     "d": "A short road-signs and traffic-rules quiz on your phone or laptop with the camera on. Most states need about 60% to pass."
+    },
+    {
+     "t": "Download your Learner's Licence",
+     "d": "Download the PDF immediately after passing. It is valid for 6 months. Practise with an ‘L’ sign and a licensed driver beside you."
+    }
+   ],
+   "tips": [
+    "You can apply for your permanent DL 30 days after getting the LL.",
+    "Practise the sample test on Sarathi before the real one."
+   ]
+  },
+  "driving-licence": {
+   "name": "Driving Licence",
+   "issuer": "Ministry of Road Transport (Sarathi / your RTO)",
+   "fee": "₹200 + ₹300 test",
+   "time": "7–30 days",
+   "mode": "Online + test",
+   "eligibility": "Must hold a Learner's Licence for at least 30 days. 18+ for cars.",
+   "docs": [
+    "Learner's Licence number",
+    "Proof of age and address (Aadhaar works for both)",
+    "Passport-size photo",
+    "Vehicle for the test (bring your own in most RTOs)"
+   ],
+   "steps": [
+    {
+     "t": "Hold a Learner's Licence 30 days",
+     "d": "Practise driving during this time. The LL must still be valid when you take the test."
+    },
+    {
+     "t": "Apply for Driving Licence on Sarathi",
+     "d": "Online Services → Driving Licence → your state → ‘Apply for Driving Licence’. Enter your LL number and date of birth."
+    },
+    {
+     "t": "Upload documents and pay",
+     "d": "Upload photo and proofs, then pay the licence and test fee online."
+    },
+    {
+     "t": "Book a driving test slot",
+     "d": "Pick a date and time at your RTO or an accredited driving test centre."
+    },
+    {
+     "t": "Take the driving test",
+     "d": "Carry your LL, receipt and originals. The inspector checks control, turns, reverse, parking and traffic signs. Two-wheeler tests often include an ‘8’ track.",
+     "w": "RTO test track"
+    },
+    {
+     "t": "Licence printed and posted",
+     "d": "After you pass, the smart card is printed and sent by Speed Post. Download the digital copy on DigiLocker or mParivahan meanwhile; it is legally valid."
+    }
+   ],
+   "tips": [
+    "If you fail, you can retake the test after 7 days.",
+    "Keep your DL in DigiLocker; traffic police accept it."
+   ]
+  },
+  "aadhaar": {
+   "name": "Aadhaar Card",
+   "issuer": "Unique Identification Authority of India (UIDAI)",
+   "fee": "Free (new)",
+   "time": "Up to 90 days",
+   "mode": "Visit centre",
+   "eligibility": "Any resident of India, including newborns (Baal Aadhaar).",
+   "docs": [
+    "Proof of identity: PAN, passport, voter ID, ration card or school ID",
+    "Proof of address: bank passbook, utility bill, ration card",
+    "For children: birth certificate and a parent's Aadhaar"
+   ],
+   "steps": [
+    {
+     "t": "Find an Aadhaar centre",
+     "d": "Use ‘Locate an Enrolment Centre’ on the UIDAI site. Banks, post offices and Aadhaar Seva Kendras enrol people."
+    },
+    {
+     "t": "Book an appointment (optional)",
+     "d": "Book a slot online at an Aadhaar Seva Kendra to avoid long queues. Walk-ins are also accepted."
+    },
+    {
+     "t": "Fill the enrolment form",
+     "d": "Get the form at the centre or download it. Fill name, address, date of birth and mobile number."
+    },
+    {
+     "t": "Give biometrics",
+     "d": "The operator takes your photo, all 10 fingerprints and an iris scan, and scans your documents.",
+     "w": "Aadhaar centre"
+    },
+    {
+     "t": "Keep the acknowledgement slip",
+     "d": "The slip has a 14-digit Enrolment ID (EID) with date and time. You need it to check status."
+    },
+    {
+     "t": "Download e-Aadhaar",
+     "d": "Once generated, download e-Aadhaar from myAadhaar with your EID or mobile OTP. It is as valid as the printed letter. The letter also comes by post."
+    }
+   ],
+   "tips": [
+    "New enrolment is free. Don't pay anyone for it.",
+    "Order a PVC Aadhaar card online for ₹50 if you want a wallet card.",
+    "Link a working mobile number; most updates need OTP."
+   ]
+  },
+  "pan": {
+   "name": "PAN Card",
+   "issuer": "Income Tax Department",
+   "fee": "Free e-PAN · ₹107 physical",
+   "time": "10 min – 20 days",
+   "mode": "Online",
+   "eligibility": "Anyone who earns, pays tax, opens a bank account or invests. Minors through a parent.",
+   "docs": [
+    "Aadhaar linked to your mobile (for instant e-PAN)",
+    "For physical PAN: proof of identity, address and date of birth",
+    "Passport-size photo and signature (physical PAN)"
+   ],
+   "steps": [
+    {
+     "t": "Go to Instant e-PAN",
+     "d": "On the Income Tax e-filing portal, open ‘Instant e-PAN’ → ‘Get New e-PAN’."
+    },
+    {
+     "t": "Enter Aadhaar and verify OTP",
+     "d": "Enter your Aadhaar number, accept the terms and enter the OTP sent to your Aadhaar-linked mobile."
+    },
+    {
+     "t": "Confirm your details",
+     "d": "Your name, photo and date of birth come from Aadhaar. Check them and submit. Note the acknowledgement number."
+    },
+    {
+     "t": "Download e-PAN",
+     "d": "The e-PAN PDF is usually ready within minutes. Download it from the same page with your Aadhaar number."
+    },
+    {
+     "t": "Order a physical card (optional)",
+     "d": "Want a plastic card? Apply or reprint through Protean (NSDL) or UTIITSL for about ₹107. It arrives by post in 15–20 days."
+    }
+   ],
+   "tips": [
+    "Having two PAN cards is illegal; surrender any extra one.",
+    "Link PAN with Aadhaar or it becomes inoperative."
+   ]
+  },
+  "voter-id": {
+   "name": "Voter ID (EPIC)",
+   "issuer": "Election Commission of India",
+   "fee": "Free",
+   "time": "About 30 days",
+   "mode": "Online",
+   "eligibility": "Indian citizen aged 18 or above on the qualifying date. You can apply in advance at 17.",
+   "docs": [
+    "Passport-size photo",
+    "Proof of age: birth certificate, Class 10 marksheet, Aadhaar or PAN",
+    "Proof of address: Aadhaar, bank passbook, utility bill or rent agreement"
+   ],
+   "steps": [
+    {
+     "t": "Sign up on the Voters' Service Portal",
+     "d": "Register with your mobile number on the portal or the Voter Helpline app."
+    },
+    {
+     "t": "Fill Form 6",
+     "d": "Choose ‘New registration for general electors (Form 6)’. Enter your details and the address where you live now."
+    },
+    {
+     "t": "Upload photo and proofs",
+     "d": "Upload a clear photo and your age and address proofs. Submit and note the reference number."
+    },
+    {
+     "t": "Booth Level Officer verifies",
+     "d": "A BLO may visit your home to confirm you live there. Keep original documents ready."
+    },
+    {
+     "t": "Get your EPIC number",
+     "d": "After approval you receive an SMS with your EPIC number. Download the e-EPIC from the portal right away."
+    },
+    {
+     "t": "Physical card by post",
+     "d": "The plastic card comes by Speed Post. Check that you appear in the electoral roll before election day."
+    }
+   ],
+   "tips": [
+    "Moving house? Use Form 8 to shift your address, not a new Form 6.",
+    "Use the Voter Helpline app to check your polling booth."
+   ]
+  },
+  "ration-card": {
+   "name": "Ration Card",
+   "issuer": "Your State Food & Civil Supplies Department",
+   "fee": "₹0–₹45 (state-wise)",
+   "time": "15–30 days",
+   "mode": "Online or office",
+   "eligibility": "Families as per state income rules. Priority / Antyodaya cards for low-income households.",
+   "docs": [
+    "Aadhaar of every family member",
+    "Address proof",
+    "Income certificate (for priority or BPL cards)",
+    "Family photo and head-of-family bank details"
+   ],
+   "steps": [
+    {
+     "t": "Open your state food department portal",
+     "d": "Each state runs its own ration card site. Find yours from the NFSA portal's state list."
+    },
+    {
+     "t": "Fill the new ration card form",
+     "d": "Add the head of family (usually the eldest woman) and all members with their Aadhaar numbers."
+    },
+    {
+     "t": "Upload documents and submit",
+     "d": "Upload proofs, submit, and save the application number. Some states need you to submit at the Tehsil / Food office."
+    },
+    {
+     "t": "Field verification",
+     "d": "A food inspector checks your details and income, sometimes with a home visit."
+    },
+    {
+     "t": "Card issued",
+     "d": "Once approved, download the card or collect it from the office. Your fair price shop is assigned on it."
+    }
+   ],
+   "tips": [
+    "One Nation One Ration Card lets you collect ration in any state.",
+    "Do your ration card eKYC at the fair price shop."
+   ]
+  },
+  "birth-certificate": {
+   "name": "Birth Certificate",
+   "issuer": "Registrar of Births & Deaths (local body)",
+   "fee": "Free within 21 days",
+   "time": "7–15 days",
+   "mode": "Online or office",
+   "eligibility": "Every birth in India must be registered. Late registration needs a fee and affidavit.",
+   "docs": [
+    "Hospital discharge slip or birth report",
+    "Parents' Aadhaar / ID proof",
+    "Address proof",
+    "Affidavit (only for registration after 1 year)"
+   ],
+   "steps": [
+    {
+     "t": "Hospital reports the birth",
+     "d": "For hospital births, the hospital usually reports to the registrar. For home births, the family reports within 21 days."
+    },
+    {
+     "t": "Register on the CRS portal",
+     "d": "Sign up as a general public user on the Civil Registration System portal, or visit your municipal / panchayat office."
+    },
+    {
+     "t": "Fill the birth report form",
+     "d": "Enter child's details (name can be added later), parents' details and place of birth."
+    },
+    {
+     "t": "Registrar verifies",
+     "d": "The registrar checks the hospital record and documents."
+    },
+    {
+     "t": "Download the certificate",
+     "d": "Once approved, download the digitally signed certificate or collect it from the office."
+    }
+   ],
+   "tips": [
+    "Register within 21 days. It is free and needs no affidavit.",
+    "Since October 2023 the birth certificate is accepted as proof of date of birth everywhere."
+   ]
+  },
+  "death-certificate": {
+   "name": "Death Certificate",
+   "issuer": "Registrar of Births & Deaths (local body)",
+   "fee": "Free within 21 days",
+   "time": "7–15 days",
+   "mode": "Online or office",
+   "eligibility": "Family member or hospital reports the death within 21 days.",
+   "docs": [
+    "Hospital / doctor's cause-of-death certificate",
+    "ID proof of the deceased (Aadhaar)",
+    "Applicant's ID proof",
+    "Cremation or burial ground receipt (if no hospital)"
+   ],
+   "steps": [
+    {
+     "t": "Report the death",
+     "d": "The hospital reports deaths that happen there. For deaths at home, a family member reports to the local registrar within 21 days."
+    },
+    {
+     "t": "Apply on CRS or at the office",
+     "d": "Fill the death report form on the CRS portal or at the municipal / panchayat office."
+    },
+    {
+     "t": "Verification",
+     "d": "The registrar checks the medical certificate and documents."
+    },
+    {
+     "t": "Collect the certificate",
+     "d": "Download or collect several copies. Banks, insurers and property offices each ask for one."
+    }
+   ],
+   "tips": [
+    "Ask for multiple certified copies at once.",
+    "You need it for insurance claims, pension and property transfer."
+   ]
+  },
+  "income-certificate": {
+   "name": "Income Certificate",
+   "issuer": "Tehsildar / Revenue Department (state)",
+   "fee": "₹10–₹50 (state-wise)",
+   "time": "7–21 days",
+   "mode": "Online or office",
+   "eligibility": "Residents of the state who need it for scholarships, fee waivers or welfare schemes.",
+   "docs": [
+    "Aadhaar",
+    "Ration card",
+    "Salary slip, Form 16 or self-declaration of income",
+    "Address proof and photo"
+   ],
+   "steps": [
+    {
+     "t": "Open your state e-District portal",
+     "d": "Every state has one (for example e-District, Seva Sindhu, Aaple Sarkar). You can also go to a Common Service Centre (CSC).",
+     "w": "State e-District / CSC"
+    },
+    {
+     "t": "Choose ‘Income Certificate’",
+     "d": "Register, select the service and fill family income details."
+    },
+    {
+     "t": "Upload documents and pay",
+     "d": "Upload proofs and pay the small service fee. Save the application number."
+    },
+    {
+     "t": "Verification by Patwari / Tehsildar",
+     "d": "Revenue officials verify income, sometimes with a local enquiry."
+    },
+    {
+     "t": "Download the certificate",
+     "d": "Download the digitally signed certificate from the portal or DigiLocker."
+    }
+   ],
+   "tips": [
+    "Most income certificates are valid for one financial year.",
+    "Search ‘income certificate’ plus your state name on YouTube for state-specific steps."
+   ]
+  },
+  "caste-certificate": {
+   "name": "Caste Certificate",
+   "issuer": "Tehsildar / SDM (state Revenue Department)",
+   "fee": "₹10–₹50 (state-wise)",
+   "time": "15–30 days",
+   "mode": "Online or office",
+   "eligibility": "Members of SC, ST, OBC or other notified categories in your state.",
+   "docs": [
+    "Aadhaar and address proof",
+    "Father's or a blood relative's caste certificate",
+    "School leaving certificate showing caste (if any)",
+    "Affidavit / self-declaration",
+    "Income proof for OBC non-creamy layer"
+   ],
+   "steps": [
+    {
+     "t": "Go to your state e-District portal or a CSC",
+     "d": "Choose the caste certificate service for your state.",
+     "w": "State e-District / CSC"
+    },
+    {
+     "t": "Fill the form",
+     "d": "Enter family details and the caste / sub-caste exactly as it appears in your family's records."
+    },
+    {
+     "t": "Upload proofs and pay",
+     "d": "Upload relatives' caste certificates and other proofs, pay the fee, and save the reference number."
+    },
+    {
+     "t": "Enquiry and verification",
+     "d": "The revenue officer verifies records, sometimes with a local enquiry."
+    },
+    {
+     "t": "Download the certificate",
+     "d": "Download the signed certificate. Central jobs need the central-format OBC certificate, so ask for that format if needed."
+    }
+   ],
+   "tips": [
+    "OBC-NCL certificates are usually renewed every year.",
+    "Keep relatives' certificates ready; they speed up approval."
+   ]
+  },
+  "domicile-certificate": {
+   "name": "Domicile Certificate",
+   "issuer": "Tehsildar / SDM (state Revenue Department)",
+   "fee": "₹10–₹50 (state-wise)",
+   "time": "7–21 days",
+   "mode": "Online or office",
+   "eligibility": "Usually 3–15 years of residence in the state, depending on state rules.",
+   "docs": [
+    "Aadhaar and address proof",
+    "Proof of years of residence: school records, voter ID, property papers",
+    "Ration card",
+    "Photo and self-declaration"
+   ],
+   "steps": [
+    {
+     "t": "Open your state e-District portal",
+     "d": "Or visit a Common Service Centre near you.",
+     "w": "State e-District / CSC"
+    },
+    {
+     "t": "Select ‘Domicile / Residence Certificate’",
+     "d": "Fill in how long you have lived in the state and your address history."
+    },
+    {
+     "t": "Upload proofs and pay",
+     "d": "Upload documents that show your years of residence, then pay the fee."
+    },
+    {
+     "t": "Verification",
+     "d": "Revenue officials check the records."
+    },
+    {
+     "t": "Download the certificate",
+     "d": "Download it from the portal or DigiLocker."
+    }
+   ],
+   "tips": [
+    "Needed for state quota admissions and state jobs."
+   ]
+  },
+  "marriage-certificate": {
+   "name": "Marriage Certificate",
+   "issuer": "Registrar of Marriages / SDM (state)",
+   "fee": "₹100–₹1,000 (state-wise)",
+   "time": "1 day – 30 days",
+   "mode": "Online + visit",
+   "eligibility": "Groom 21+, bride 18+. Special Marriage Act needs a 30-day notice period.",
+   "docs": [
+    "Age proof of both partners",
+    "Address proof of both",
+    "Wedding photo and invitation card",
+    "Two witnesses with ID proof",
+    "Affidavits of marital status"
+   ],
+   "steps": [
+    {
+     "t": "Pick the law that applies",
+     "d": "Already married by religious rites? Register under your personal law (for example the Hindu Marriage Act). Inter-faith or court marriage? Use the Special Marriage Act."
+    },
+    {
+     "t": "Apply on the state portal",
+     "d": "Fill the marriage registration form online and book a date with the Sub-Registrar / SDM office.",
+     "w": "State registration portal"
+    },
+    {
+     "t": "Give notice (Special Marriage Act only)",
+     "d": "A 30-day public notice is displayed. Objections, if any, are heard in this time."
+    },
+    {
+     "t": "Visit the office with witnesses",
+     "d": "Both partners and the witnesses sign before the registrar with original documents.",
+     "w": "Registrar office"
+    },
+    {
+     "t": "Collect the certificate",
+     "d": "Under personal law it is often issued the same day. Download or collect the certificate."
+    }
+   ],
+   "tips": [
+    "Needed for passport name change, visas and joint loans."
+   ]
+  },
+  "ayushman-card": {
+   "name": "Ayushman Card (PM-JAY)",
+   "issuer": "National Health Authority",
+   "fee": "Free",
+   "time": "Same day – 7 days",
+   "mode": "Online / app",
+   "eligibility": "Families listed in SECC data or state lists, and every citizen aged 70+ (Ayushman Vay Vandana).",
+   "docs": [
+    "Aadhaar linked to mobile",
+    "Ration card (in many states)"
+   ],
+   "steps": [
+    {
+     "t": "Check your eligibility",
+     "d": "Open the beneficiary portal or the Ayushman app, log in with mobile OTP and search by state and Aadhaar."
+    },
+    {
+     "t": "Complete eKYC",
+     "d": "Verify with Aadhaar OTP or face authentication and take a live photo in the app."
+    },
+    {
+     "t": "Wait for approval",
+     "d": "Your request goes to the state health agency. It is often approved within a day."
+    },
+    {
+     "t": "Download the card",
+     "d": "Download the Ayushman card from the app or portal. It covers up to ₹5 lakh per family per year at empanelled hospitals."
+    }
+   ],
+   "tips": [
+    "Show the card at the hospital's Ayushman Mitra desk.",
+    "Cashless treatment; no payment at empanelled hospitals."
+   ]
+  },
+  "abha": {
+   "name": "ABHA Health ID",
+   "issuer": "National Health Authority (ABDM)",
+   "fee": "Free",
+   "time": "5 minutes",
+   "mode": "Online",
+   "eligibility": "Any resident of India.",
+   "docs": [
+    "Aadhaar (or driving licence) linked to mobile"
+   ],
+   "steps": [
+    {
+     "t": "Open the ABHA portal",
+     "d": "Click ‘Create ABHA Number’ and choose Aadhaar."
+    },
+    {
+     "t": "Verify with OTP",
+     "d": "Enter Aadhaar, accept consent and enter the OTP."
+    },
+    {
+     "t": "Create your ABHA address",
+     "d": "Pick an address like yourname@abdm to share health records with doctors."
+    },
+    {
+     "t": "Download the card",
+     "d": "Download your ABHA card. Link it in apps like Aarogya Setu or DigiLocker to store reports."
+    }
+   ],
+   "tips": [
+    "Different from the Ayushman card; ABHA stores records, it is not insurance."
+   ]
+  },
+  "e-shram": {
+   "name": "e-Shram Card",
+   "issuer": "Ministry of Labour & Employment",
+   "fee": "Free",
+   "time": "Same day",
+   "mode": "Online / CSC",
+   "eligibility": "Unorganised workers aged 16–59 who are not EPFO/ESIC members or income tax payers.",
+   "docs": [
+    "Aadhaar linked to mobile",
+    "Bank account details",
+    "Occupation and education details"
+   ],
+   "steps": [
+    {
+     "t": "Open the e-Shram portal",
+     "d": "Click ‘Register on e-Shram’, or visit a CSC if you don't have a phone linked to Aadhaar."
+    },
+    {
+     "t": "Verify Aadhaar with OTP",
+     "d": "Enter your Aadhaar-linked mobile number and Aadhaar, then the OTP."
+    },
+    {
+     "t": "Fill personal and work details",
+     "d": "Add address, education, occupation, skills and bank account."
+    },
+    {
+     "t": "Download the UAN card",
+     "d": "Get your 12-digit Universal Account Number card instantly."
+    }
+   ],
+   "tips": [
+    "Gives ₹2 lakh accident insurance under PMSBY for registered workers."
+   ]
+  }
+ }
+}

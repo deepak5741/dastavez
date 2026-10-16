@@ -1,38 +1,74 @@
-# Dastavez Guide
+# Dastavez
 
-Search any Indian government document and see the full process to get it, step by step: who can apply, which papers to carry, every step from form to delivery, fees, timelines, official portals, helplines and YouTube explainers.
+Search any Indian government document and see the full process to get it, step by step: who can apply, which papers to carry, every step from form to delivery, fees, timelines, official portals, helplines and YouTube explainers. Available in 11 languages.
+
+- **Frontend:** Nuxt 4 (server-side rendered) in [`frontend/`](frontend)
+- **Backend:** Deno + Hono REST API in [`backend/`](backend)
+- **Database:** PostgreSQL. All content lives here: languages, every interface text, all document guides and their translations, plus user accounts.
+
+```
+Browser ──> Nuxt (frontend/, port 3000) ──/api/*──> Deno API (backend/, port 8000) ──> PostgreSQL
+            renders pages on the server          content, search, accounts, admin
+            keeps the session in an httpOnly cookie
+```
+
+Nothing is hard-coded in the frontend: change a translation, a step or a fee in the database (through the admin API) and the site shows it on the next page load.
 
 ## Features
 
 - 16 documents: Passport, Learner's Licence, Driving Licence, Aadhaar, PAN, Voter ID, Ration Card, Birth, Death, Income, Caste, Domicile and Marriage certificates, Ayushman Card, ABHA and e-Shram
 - 11 languages: English, हिन्दी, मराठी, ગુજરાતી, বাংলা, ਪੰਜਾਬੀ, ଓଡ଼ିଆ, தமிழ், తెలుగు, ಕನ್ನಡ, മലയാളം
-- Search with typo tolerance ("adhaar", "DL", "licence") and native-script search
-- Step checklist with progress, clickable official links on each step
-- Optional sign-up to save documents (stored in the browser only, no server)
-- Light theme by default, dark theme on demand, works on phones down to 320px
+- Server-side search with typo tolerance ("adhaar", "DL") and native-script search
+- Step checklist with progress; clickable official links on steps
+- Optional accounts (email + password) to save documents and sync progress across devices; guests keep progress in the browser and it moves into the account on sign-up
+- Light theme by default, dark on demand; works on phones down to 320px
 
-## Project structure
+## Run it locally
 
-```
-index.html      Page, styles, English content and app logic
-i18n/*.json     Translations (UI strings + all document guides), loaded on demand
-```
-
-No build step and no dependencies. Fonts come from Google Fonts.
-
-## Run locally
+You need [Deno 2](https://deno.com), [Node.js 20+](https://nodejs.org) and PostgreSQL 13+.
 
 ```bash
-python3 -m http.server 8000
+# 1. Database
+createdb dastavez
+
+# 2. Backend
+cd backend
+cp .env.example .env          # set DATABASE_URL and a long random ADMIN_TOKEN
+deno task setup               # creates tables and loads all content
+deno task dev                 # http://localhost:8000
+
+# 3. Frontend (new terminal)
+cd frontend
+cp .env.example .env
+npm install
+npm run dev                   # http://localhost:3000
 ```
 
-Then open http://localhost:8000. (Opening `index.html` directly works for English; other languages need a local server because they are fetched.)
+Run the API tests with `cd backend && deno task test`.
 
-## Adding or editing a document
+## Repository layout
 
-1. Add or edit the entry in the `DOCS` array in `index.html` (English).
-2. Add the same `id` under `docs` in every `i18n/*.json` file, with the same number of `steps` and `docs` items.
-3. A step's `w` field becomes a clickable link: a domain (e.g. `passportindia.gov.in`) links to that site; any other text links to the document's official portal.
+```
+backend/
+  main.ts            API entry point (Hono)
+  src/               content service, auth, routes
+  db/schema.sql      PostgreSQL tables
+  seed/              initial content: languages, documents, locales/<lang>.json
+  scripts/           migrate and seed
+  main_test.ts       end-to-end API tests
+frontend/
+  app/               pages, components, composables (Nuxt 4)
+  server/            proxy to the API, sign-in cookie handling
+docs/                the earlier static version, still served by GitHub Pages
+```
+
+## Deploying (free tiers)
+
+| Part | Suggested host | Notes |
+|---|---|---|
+| PostgreSQL | Neon or Supabase | Copy the connection string (with `?sslmode=require`) into the backend's `DATABASE_URL`, then run `deno task setup` once. |
+| Backend | Deno Deploy | Entry point `backend/main.ts`. Set `DATABASE_URL`, `ADMIN_TOKEN`, `CORS_ORIGINS`. |
+| Frontend | Vercel or Netlify | Root directory `frontend`. Set `NUXT_API_BASE` to the backend URL. |
 
 ## Disclaimer
 

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "identity",
+    "sortOrder": 0
+  },
+  {
+    "id": "transport",
+    "sortOrder": 1
+  },
+  {
+    "id": "finance",
+    "sortOrder": 2
+  },
+  {
+    "id": "certificates",
+    "sortOrder": 3
+  },
+  {
+    "id": "health",
+    "sortOrder": 4
+  },
+  {
+    "id": "welfare",
+    "sortOrder": 5
+  }
+]

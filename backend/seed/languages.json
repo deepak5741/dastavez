@@ -1,0 +1,68 @@
+[
+  {
+    "code": "en",
+    "nativeName": "English",
+    "englishName": "English",
+    "sortOrder": 0
+  },
+  {
+    "code": "hi",
+    "nativeName": "हिन्दी",
+    "englishName": "Hindi",
+    "sortOrder": 1
+  },
+  {
+    "code": "mr",
+    "nativeName": "मराठी",
+    "englishName": "Marathi",
+    "sortOrder": 2
+  },
+  {
+    "code": "gu",
+    "nativeName": "ગુજરાતી",
+    "englishName": "Gujarati",
+    "sortOrder": 3
+  },
+  {
+    "code": "bn",
+    "nativeName": "বাংলা",
+    "englishName": "Bengali",
+    "sortOrder": 4
+  },
+  {
+    "code": "pa",
+    "nativeName": "ਪੰਜਾਬੀ",
+    "englishName": "Punjabi",
+    "sortOrder": 5
+  },
+  {
+    "code": "or",
+    "nativeName": "ଓଡ଼ିଆ",
+    "englishName": "Odia",
+    "sortOrder": 6
+  },
+  {
+    "code": "ta",
+    "nativeName": "தமிழ்",
+    "englishName": "Tamil",
+    "sortOrder": 7
+  },
+  {
+    "code": "te",
+    "nativeName": "తెలుగు",
+    "englishName": "Telugu",
+    "sortOrder": 8
+  },
+  {
+    "code": "kn",
+    "nativeName": "ಕನ್ನಡ",
+    "englishName": "Kannada",
+    "sortOrder": 9
+  },
+  {
+    "code": "ml",
+    "nativeName": "മലയാളം",
+    "englishName": "Malayalam",
+    "sortOrder": 10
+  }
+]
